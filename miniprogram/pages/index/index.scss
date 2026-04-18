@@ -1,16 +1,19 @@
 page {
-  background: #f6f6f6;
+  background: #fff;
   color: #222;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
 }
 
 .page {
   min-height: 100vh;
+  padding-top: 50px;
+  box-sizing: border-box;
+  background: #fff;
 }
 
 .topbar {
-  height: 140rpx;
-  padding: 24rpx;
+  height: 88rpx;
+  padding: 0 24rpx;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -26,12 +29,13 @@ page {
 }
 
 .title {
-  font-size: 48rpx;
+  font-size: 40rpx;
   font-weight: 600;
-  letter-spacing: 2rpx;
   position: absolute;
+  top: 37%;
+  letter-spacing: 2rpx;
+  transform: translate(-50%, -50%);
   left: 50%;
-  transform: translateX(-50%);
 }
 
 .top-actions {
@@ -48,7 +52,7 @@ page {
 }
 
 .content {
-  height: calc(100vh - 140rpx);
+  height: calc(100vh - 176rpx - 50px);
 }
 
 .category-bar {
@@ -56,6 +60,7 @@ page {
   white-space: nowrap;
   padding: 20rpx 12rpx 8rpx;
   box-sizing: border-box;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .category-item {
@@ -73,7 +78,7 @@ page {
 }
 
 .gallery-grid {
-  padding: 14rpx 12rpx 24rpx;
+  padding: 22rpx 12rpx 24rpx;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -87,7 +92,7 @@ page {
   overflow: hidden;
   margin-bottom: 12rpx;
   position: relative;
-  background: #ddd;
+  background: #fff;
 }
 
 .photo {

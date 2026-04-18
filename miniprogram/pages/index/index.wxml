@@ -3,19 +3,19 @@
     <text class="title">作品欣赏</text>
   </view>
 
-  <scroll-view class="content" scroll-y>
-    <scroll-view class="category-bar" scroll-x enable-flex show-scrollbar="false">
-      <view
-        wx:for="{{categories}}"
-        wx:key="id"
-        class="category-item {{activeCategoryId === item.id ? 'active' : ''}}"
-        bindtap="onTapCategory"
-        data-id="{{item.id}}"
-      >
-        {{item.name}}
-      </view>
-    </scroll-view>
+  <scroll-view class="category-bar" scroll-x enable-flex show-scrollbar="false">
+    <view
+      wx:for="{{categories}}"
+      wx:key="id"
+      class="category-item {{activeCategoryId === item.id ? 'active' : ''}}"
+      bindtap="onTapCategory"
+      data-id="{{item.id}}"
+    >
+      {{item.name}}
+    </view>
+  </scroll-view>
 
+  <scroll-view class="content" scroll-y>
     <view class="gallery-grid">
       <view wx:for="{{displayImages}}" wx:key="src" class="card">
         <image class="photo" src="{{item.src}}" mode="aspectFill" />
