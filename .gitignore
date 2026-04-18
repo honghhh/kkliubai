@@ -1,0 +1,54 @@
+# ========================
+# 微信开发者工具专属配置
+# ========================
+# 忽略个人的项目配置文件（必须忽略，否则会导致团队协作时 AppID 等本地配置冲突）
+project.private.config.json
+
+# ========================
+# Node.js / 依赖包
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# 微信云开发相关 (如果没有使用云开发可删除)
+# ========================
+# 忽略云函数目录下的 node_modules，部署时云端会自动安装依赖
+cloudfunctions/*/node_modules/
+cloudfunctions/*/.npm/
+cloudfunctions/*/package-lock.json
+
+# ========================
+# 第三方框架构建目录 (仅在使用 uni-app / Taro 等框架时需要)
+# ========================
+dist/
+unpackage/
+
+# ========================
+# 操作系统生成文件
+# ========================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ========================
+# 编辑器/IDE 配置
+# ========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
