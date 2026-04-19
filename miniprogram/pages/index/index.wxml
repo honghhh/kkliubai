@@ -15,13 +15,14 @@
     </view>
   </scroll-view>
 
-  <scroll-view class="content" scroll-y>
+  <scroll-view class="content" scroll-y bindscrolltolower="onScrollToLower" lower-threshold="120">
     <view class="gallery-grid">
       <view wx:for="{{displayImages}}" wx:key="src" class="card">
         <image
           class="photo"
           src="{{item.src}}"
           mode="aspectFill"
+          lazy-load="true"
           bindtap="onTapImage"
           data-src="{{item.src}}"
         />

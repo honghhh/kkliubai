@@ -17,13 +17,12 @@ Component({
       { id: 1, name: '日系' },
       { id: 2, name: '韩系' },
       { id: 3, name: '胶片' },
-      { id: 4, name: '审美' },
+      { id: 4, name: '审美积累' },
     ] as Category[],
     allImages: [
-      { src: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 1 },
+      { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 1 },
       { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 2 },
       { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 3 },
-      { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 4 },
       { src: 'https://img.keviecc.online/2026/04/19/2f16a671-9740-4fc0-bd12-2567cb718215/1.jpg', tag: 'kk留白影像', categoryId: 4 },
       { src: 'https://img.keviecc.online/2026/04/19/fe52612d-2727-43ef-b465-1c85551fdfb2/2.jpg', tag: 'kk留白影像', categoryId: 4 },
       { src: 'https://img.keviecc.online/2026/04/19/cfbd0189-339c-4aaf-9661-b5010aa7e159/3.jpg', tag: 'kk留白影像', categoryId: 4 },
@@ -600,6 +599,8 @@ Component({
       { src: 'https://img.keviecc.online/2026/04/19/1b5d43fb-3686-4da4-84bf-6f0ed1b15dc7/838.jpg', tag: 'kk留白影像', categoryId: 4 },
     ] as GalleryItem[],
     displayImages: [] as GalleryItem[],
+    currentPage: 1,
+    hasMore: true,
   },
 
   lifetimes: {
@@ -611,13 +612,15 @@ Component({
   methods: {
     onTapCategory(e: WechatMiniprogram.BaseEvent) {
       const { id } = e.currentTarget.dataset as { id: number }
-      this.setData({ activeCategoryId: id })
+      this.setData({ activeCategoryId: id, currentPage: 1, displayImages: [], hasMore: true })
       this.updateDisplayImages(id)
     },
 
     onTapImage(e: WechatMiniprogram.BaseEvent) {
       const { src } = e.currentTarget.dataset as { src: string }
-      const urls = this.data.displayImages.map((item) => item.src)
+      const { allImages, activeCategoryId } = this.data
+      const filtered = activeCategoryId === 0 ? allImages : allImages.filter((item) => item.categoryId === activeCategoryId)
+      const urls = filtered.map((item) => item.src)
 
       wx.previewImage({
         current: src,
@@ -625,12 +628,21 @@ Component({
       })
     },
 
-    updateDisplayImages(categoryId: number) {
-      const { allImages } = this.data
-      const displayImages =
-        categoryId === 0 ? allImages : allImages.filter((item) => item.categoryId === categoryId)
+    onScrollToLower() {
+      if (!this.data.hasMore) return
+      const nextPage = this.data.currentPage + 1
+      this.setData({ currentPage: nextPage })
+      this.updateDisplayImages(this.data.activeCategoryId)
+    },
 
-      this.setData({ displayImages })
+    updateDisplayImages(categoryId: number) {
+      const PAGE_SIZE = 30
+      const { allImages, currentPage } = this.data
+      const filtered = categoryId === 0 ? allImages : allImages.filter((item) => item.categoryId === categoryId)
+      const paged = filtered.slice(0, currentPage * PAGE_SIZE)
+      const hasMore = paged.length < filtered.length
+
+      this.setData({ displayImages: paged, hasMore })
     },
   },
 })
