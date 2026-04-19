@@ -1,33 +1,61 @@
 <view class="page">
   <view class="topbar">
-    <text class="title">作品欣赏</text>
+    <text class="title">{{activeTab === 0 ? '作品欣赏' : '个人简介'}}</text>
   </view>
 
-  <scroll-view class="category-bar" scroll-x enable-flex show-scrollbar="false">
-    <view
-      wx:for="{{categories}}"
-      wx:key="id"
-      class="category-item {{activeCategoryId === item.id ? 'active' : ''}}"
-      bindtap="onTapCategory"
-      data-id="{{item.id}}"
-    >
-      {{item.name}}
-    </view>
+  <view wx:if="{{activeTab === 0}}">
+    <scroll-view class="category-bar" scroll-x enable-flex show-scrollbar="false">
+      <view
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="category-item {{activeCategoryId === item.id ? 'active' : ''}}"
+        bindtap="onTapCategory"
+        data-id="{{item.id}}"
+      >
+        {{item.name}}
+      </view>
+    </scroll-view>
+
+    <scroll-view class="content" scroll-y bindscrolltolower="onScrollToLower" lower-threshold="120">
+      <view class="gallery-grid">
+        <view wx:for="{{displayImages}}" wx:key="src" class="card">
+          <image
+            class="photo"
+            src="{{item.src}}"
+            mode="aspectFill"
+            lazy-load="true"
+            bindtap="onTapImage"
+            data-src="{{item.src}}"
+          />
+          <text class="corner-tag">{{item.tag}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <scroll-view wx:if="{{activeTab === 1}}" class="profile-content" scroll-y>
+    <image class="profile-img" src="/images/个人简介.jpg" mode="widthFix" />
   </scroll-view>
 
-  <scroll-view class="content" scroll-y bindscrolltolower="onScrollToLower" lower-threshold="120">
-    <view class="gallery-grid">
-      <view wx:for="{{displayImages}}" wx:key="src" class="card">
-        <image
-          class="photo"
-          src="{{item.src}}"
-          mode="aspectFill"
-          lazy-load="true"
-          bindtap="onTapImage"
-          data-src="{{item.src}}"
-        />
-        <text class="corner-tag">{{item.tag}}</text>
+  <view class="tabbar">
+    <view class="tabbar-item {{activeTab === 0 ? 'tabbar-active' : ''}}" bindtap="onTapTab" data-tab="0">
+      <view class="tabbar-icon">
+        <view class="icon-layers">
+          <view class="icon-layer"></view>
+          <view class="icon-layer"></view>
+          <view class="icon-layer"></view>
+        </view>
       </view>
+      <text class="tabbar-label">作品欣赏</text>
     </view>
-  </scroll-view>
+    <view class="tabbar-item {{activeTab === 1 ? 'tabbar-active' : ''}}" bindtap="onTapTab" data-tab="1">
+      <view class="tabbar-icon">
+        <view class="icon-profile">
+          <view class="icon-profile-head"></view>
+          <view class="icon-profile-body"></view>
+        </view>
+      </view>
+      <text class="tabbar-label">个人简介</text>
+    </view>
+  </view>
 </view>
