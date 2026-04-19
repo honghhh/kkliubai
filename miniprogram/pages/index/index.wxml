@@ -18,7 +18,13 @@
   <scroll-view class="content" scroll-y>
     <view class="gallery-grid">
       <view wx:for="{{displayImages}}" wx:key="src" class="card">
-        <image class="photo" src="{{item.src}}" mode="aspectFill" />
+        <image
+          class="photo"
+          src="{{item.src}}"
+          mode="aspectFill"
+          bindtap="onTapImage"
+          data-src="{{item.src}}"
+        />
         <text class="corner-tag">{{item.tag}}</text>
       </view>
     </view>
