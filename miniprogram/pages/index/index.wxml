@@ -17,7 +17,12 @@
     </scroll-view>
 
     <scroll-view class="content" scroll-y bindscrolltolower="onScrollToLower" lower-threshold="120">
-      <view class="gallery-grid">
+      <view wx:if="{{activeCategoryId === 5}}" class="aesthetic-switch-row">
+        <text class="aesthetic-switch-label">{{aestheticZoomEnabled ? '图片放大已开启' : '图片放大已关闭'}}</text>
+        <switch checked="{{aestheticZoomEnabled}}" bindchange="onToggleAestheticZoom" color="#65d2c0" />
+      </view>
+
+      <view wx:if="{{activeCategoryId !== 6}}" class="gallery-grid">
         <view wx:for="{{displayImages}}" wx:key="src" class="card">
           <image
             class="photo"
@@ -30,11 +35,46 @@
           <text class="corner-tag">{{item.tag}}</text>
         </view>
       </view>
+
+      <view wx:if="{{activeCategoryId === 6}}" class="video-panel">
+        <view class="video-switch-row">
+          <text class="video-switch-label">{{videoVisible ? '显示' : '隐藏'}}</text>
+          <switch checked="{{videoVisible}}" bindchange="onToggleVideoVisible" color="#65d2c0" />
+        </view>
+
+        <view wx:if="{{videoVisible}}" class="video-list">
+          <view wx:for="{{displayVideos}}" wx:key="id" class="video-item">
+            <text class="video-title">{{item.title}}</text>
+            <video
+              id="video-{{item.id}}"
+              class="video-player"
+              data-id="{{item.id}}"
+              src="{{item.src}}"
+              poster="{{item.poster}}"
+              controls
+              show-fullscreen-btn
+              bindfullscreenchange="onVideoFullscreenChange"
+              bindended="onVideoEnded"
+            ></video>
+            <view class="video-actions">
+              <button
+                class="video-fullscreen-btn"
+                size="mini"
+                data-id="{{item.id}}"
+                bindtap="onTapVideoFullscreen"
+                disabled="{{fullscreenVideoId === item.id}}"
+              >
+                {{fullscreenVideoId === item.id ? '全屏播放中' : '全屏播放'}}
+              </button>
+            </view>
+          </view>
+        </view>
+      </view>
     </scroll-view>
   </view>
 
   <scroll-view wx:if="{{activeTab === 1}}" class="profile-content" scroll-y>
-    <image class="profile-img" src="/images/个人简介.jpg" mode="widthFix" />
+    <image class="profile-img" src="/images/个人简介.jpg" mode="widthFix" bindtap="onTapProfileImage" />
   </scroll-view>
 
   <view class="tabbar">
