@@ -17,12 +17,12 @@
     </scroll-view>
 
     <scroll-view class="content" scroll-y bindscrolltolower="onScrollToLower" lower-threshold="120">
-      <view wx:if="{{activeCategoryId === 5}}" class="aesthetic-switch-row">
+      <view wx:if="{{activeCategoryId === 6}}" class="aesthetic-switch-row">
         <text class="aesthetic-switch-label">{{aestheticZoomEnabled ? '图片放大已开启' : '图片放大已关闭'}}</text>
         <switch checked="{{aestheticZoomEnabled}}" bindchange="onToggleAestheticZoom" color="#65d2c0" />
       </view>
 
-      <view wx:if="{{activeCategoryId !== 6}}" class="gallery-grid">
+      <view wx:if="{{activeCategoryId !== 7}}" class="gallery-grid">
         <view wx:for="{{displayImages}}" wx:key="src" class="card">
           <image
             class="photo"
@@ -36,7 +36,7 @@
         </view>
       </view>
 
-      <view wx:if="{{activeCategoryId === 6}}" class="video-panel">
+      <view wx:if="{{activeCategoryId === 7}}" class="video-panel">
         <view class="video-switch-row">
           <text class="video-switch-label">{{videoVisible ? '显示' : '隐藏'}}</text>
           <switch checked="{{videoVisible}}" bindchange="onToggleVideoVisible" color="#65d2c0" />

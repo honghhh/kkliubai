@@ -26,14 +26,15 @@ Component({
       { id: 2, name: '韩系' },
       { id: 3, name: '胶片' },
       { id: 4, name: '森系' },
-      { id: 5, name: '审美积累' },
-      { id: 6, name: '视频' },
+      { id: 5, name: '指导动作' },
+      { id: 6, name: '审美积累' },
+      { id: 7, name: '视频' },
     ] as Category[],
     allImages: [
       { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 1 },
       { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 2 },
       { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 3 },
-      { src: 'https://img.keviecc.online/2026/04/19/2f16a671-9740-4fc0-bd12-2567cb718215/1.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/04/19/2f16a671-9740-4fc0-bd12-2567cb718215/1.jpg', tag: 'kk留白影像', categoryId: 6 },
     ] as GalleryItem[],
     videos: [
       {
@@ -85,7 +86,7 @@ Component({
         videoHasMore: true,
       })
 
-      if (id === 6) {
+      if (id === 7) {
         this.updateDisplayVideos()
         return
       }
@@ -97,7 +98,7 @@ Component({
       const { src } = e.currentTarget.dataset as { src: string }
       const { allImages, activeCategoryId, aestheticZoomEnabled } = this.data
 
-      if (activeCategoryId === 5 && !aestheticZoomEnabled) {
+      if (activeCategoryId === 6 && !aestheticZoomEnabled) {
         return
       }
 
@@ -120,7 +121,7 @@ Component({
     },
 
     onScrollToLower() {
-      if (this.data.activeCategoryId === 6) {
+      if (this.data.activeCategoryId === 7) {
         if (!this.data.videoHasMore) return
         const nextVideoPage = this.data.videoCurrentPage + 1
         this.setData({ videoCurrentPage: nextVideoPage })
