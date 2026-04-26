@@ -46,13 +46,11 @@ Component({
         id: 2,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/02/11/23/BMjAyMzAyMTEyMzUwMTZfMTMwMDIyNzEwOV85NjAxMzU3MDQ2MV8wXzM=_b_Bd1cb86d41f45b65fc4336b2bc57db094.mp4',
-        poster: 'https://img.keviecc.online/2026/04/24/098836ad-5241-4505-9163-6e17528e4a9e/feDoINZwdB.png',
       },
       {
         id: 3,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/05/02/12/BMjAyMzA1MDIxMjA0MjBfMTMwMDIyNzEwOV8xMDIwNjMyMDgxNzBfMF8z_b_B51ffeb6beaee56576ee17e461fe5a433.mp4',
-        poster: 'https://img.keviecc.online/2026/04/24/098836ad-5241-4505-9163-6e17528e4a9e/feDoINZwdB.png',
       },
     ] as VideoItem[],
     displayImages: [] as GalleryItem[],
