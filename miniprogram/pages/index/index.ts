@@ -34,17 +34,22 @@ Component({
       { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 1 },
       { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 2 },
       { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 3 },
-      { src: 'https://img.keviecc.online/2026/04/19/2f16a671-9740-4fc0-bd12-2567cb718215/1.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/04/26/e8021b90-9def-490c-8a19-94e8f4501b3d/2a29ed2e194832621f0333c9891494e3.jpg', tag: 'kk留白影像', categoryId: 6 },
     ] as GalleryItem[],
     videos: [
       {
         id: 1,
+        title: '富士参数设置',
+        src: 'https://k0u2ay30y79y8fzw2408x8752x0x101xxfz.djvod.ndcimgs.com/upic/2026/04/26/17/BMjAyNjA0MjYxNzA5NTlfMTMwMDIyNzEwOV8xOTQxOTg0NDQxMjFfMF8z_b_B3633f7861e231b6f02b0aec502d08d0f.mp4',
+      },
+      {
+        id: 2,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/02/11/23/BMjAyMzAyMTEyMzUwMTZfMTMwMDIyNzEwOV85NjAxMzU3MDQ2MV8wXzM=_b_Bd1cb86d41f45b65fc4336b2bc57db094.mp4',
         poster: 'https://img.keviecc.online/2026/04/24/098836ad-5241-4505-9163-6e17528e4a9e/feDoINZwdB.png',
       },
       {
-        id: 2,
+        id: 3,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/05/02/12/BMjAyMzA1MDIxMjA0MjBfMTMwMDIyNzEwOV8xMDIwNjMyMDgxNzBfMF8z_b_B51ffeb6beaee56576ee17e461fe5a433.mp4',
         poster: 'https://img.keviecc.online/2026/04/24/098836ad-5241-4505-9163-6e17528e4a9e/feDoINZwdB.png',
