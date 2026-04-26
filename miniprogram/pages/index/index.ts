@@ -35,6 +35,7 @@ Component({
       { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 2 },
       { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 3 },
       { src: 'https://img.keviecc.online/2026/04/26/e8021b90-9def-490c-8a19-94e8f4501b3d/2a29ed2e194832621f0333c9891494e3.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/04/27/b3649735-2155-4ec5-a3cf-45b888b6a6ac/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260426201603_478_958.jpg', tag: 'kk留白影像', categoryId: 6 },
     ] as GalleryItem[],
     videos: [
       {
@@ -72,6 +73,16 @@ Component({
   },
 
   methods: {
+    getImagesByCategory(categoryId: number) {
+      const { allImages } = this.data
+
+      if (categoryId === 0) {
+        return allImages.filter((item) => item.categoryId !== 5 && item.categoryId !== 6)
+      }
+
+      return allImages.filter((item) => item.categoryId === categoryId)
+    },
+
     onTapTab(e: WechatMiniprogram.BaseEvent) {
       const tab = Number(e.currentTarget.dataset.tab)
       this.setData({ activeTab: tab })
@@ -99,13 +110,13 @@ Component({
 
     onTapImage(e: WechatMiniprogram.BaseEvent) {
       const { src } = e.currentTarget.dataset as { src: string }
-      const { allImages, activeCategoryId, aestheticZoomEnabled } = this.data
+      const { activeCategoryId, aestheticZoomEnabled } = this.data
 
       if (activeCategoryId === 6 && !aestheticZoomEnabled) {
         return
       }
 
-      const filtered = activeCategoryId === 0 ? allImages : allImages.filter((item) => item.categoryId === activeCategoryId)
+      const filtered = this.getImagesByCategory(activeCategoryId)
       const urls = filtered.map((item) => item.src)
 
       wx.previewImage({
@@ -177,8 +188,8 @@ Component({
 
     updateDisplayImages(categoryId: number) {
       const PAGE_SIZE = 30
-      const { allImages, currentPage } = this.data
-      const filtered = categoryId === 0 ? allImages : allImages.filter((item) => item.categoryId === categoryId)
+      const { currentPage } = this.data
+      const filtered = this.getImagesByCategory(categoryId)
       const paged = filtered.slice(0, currentPage * PAGE_SIZE)
       const hasMore = paged.length < filtered.length
 
