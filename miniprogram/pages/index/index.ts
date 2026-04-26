@@ -53,6 +53,11 @@ Component({
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/05/02/12/BMjAyMzA1MDIxMjA0MjBfMTMwMDIyNzEwOV8xMDIwNjMyMDgxNzBfMF8z_b_B51ffeb6beaee56576ee17e461fe5a433.mp4',
       },
+      {
+        id: 4,
+        title: '亚索1V2',
+        src: 'https://txmov2.a.yximgs.com/upic/2023/01/19/21/BMjAyMzAxMTkyMTU2NDJfMTMwMDIyNzEwOV85NDAzMjAxODQ0OF8wXzM=_b_B816c73d52571ca881a87fa5f933762e5.mp4',
+      },
     ] as VideoItem[],
     displayImages: [] as GalleryItem[],
     displayVideos: [] as VideoItem[],
