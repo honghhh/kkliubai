@@ -53,6 +53,7 @@ Component({
       { src: 'https://img.keviecc.online/2026/04/27/5ba544e0-0314-439f-99e3-4e0632ac36ba/7wAs0GsE2a.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/04/26/e8021b90-9def-490c-8a19-94e8f4501b3d/2a29ed2e194832621f0333c9891494e3.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/27/b3649735-2155-4ec5-a3cf-45b888b6a6ac/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260426201603_478_958.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/10/afb82a58-05e3-45ac-b13b-6c4675623604/%E6%9C%AA%E5%91%BD%E5%90%8D_%E5%89%AF%E6%9C%AC.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/19/2f16a671-9740-4fc0-bd12-2567cb718215/1.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/19/fe52612d-2727-43ef-b465-1c85551fdfb2/2.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/19/cfbd0189-339c-4aaf-9661-b5010aa7e159/3.jpg', tag: 'kk留白影像', categoryId: 6 },
@@ -650,16 +651,31 @@ Component({
       },
       {
         id: 2,
+        title: '富士色温',
+        src: 'https://k0u3cya9y6y15zw240ex958x2102x101x0x1x0x15z.djvod.ndcimgs.com/upic/2026/05/10/10/BMjAyNjA1MTAxMDA4MzNfMTMwMDIyNzEwOV8xOTU1MDc2NDk4NDVfMF8z_b_B71a6f4fd93a2e462ac0d3ff1a331c5f3.mp4',
+      },
+      {
+        id: 3,
+        title: '神牛闪光灯',
+        src: 'https://k0u3cya9y6y15zw240ex958x2102x101x0x1x0x15z.djvod.ndcimgs.com/upic/2026/05/10/10/BMjAyNjA1MTAxMDA4NTlfMTMwMDIyNzEwOV8xOTU1MDc2NjMxMTFfMF8z_b_B0a34e8c9eb55aaae11194434d6b3237f.mp4',
+      },
+      {
+        id: 4,
+        title: '富士配件',
+        src: 'https://k0ub6y6by50y2czw240excdxef00x281xx2cz.djvod.ndcimgs.com/upic/2026/05/10/10/BMjAyNjA1MTAxMDA5MjBfMTMwMDIyNzEwOV8xOTU1MDc3MTM3MzlfMF8z_b_B6fecc4ab661b52c0a8b536e2d728d907.mp4?tag=1-1778379175-unknown-0-ourf2izwiu-9e84f4f0f5a382ae&provider=self&clientCacheKey=3xr7r5finru9m7c_b.mp4',
+      },
+      {
+        id: 5,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/02/11/23/BMjAyMzAyMTEyMzUwMTZfMTMwMDIyNzEwOV85NjAxMzU3MDQ2MV8wXzM=_b_Bd1cb86d41f45b65fc4336b2bc57db094.mp4',
       },
       {
-        id: 3,
+        id: 6,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/05/02/12/BMjAyMzA1MDIxMjA0MjBfMTMwMDIyNzEwOV8xMDIwNjMyMDgxNzBfMF8z_b_B51ffeb6beaee56576ee17e461fe5a433.mp4',
       },
       {
-        id: 4,
+        id: 7,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/01/19/21/BMjAyMzAxMTkyMTU2NDJfMTMwMDIyNzEwOV85NDAzMjAxODQ0OF8wXzM=_b_B816c73d52571ca881a87fa5f933762e5.mp4',
       },
