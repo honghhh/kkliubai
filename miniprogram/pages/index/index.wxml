@@ -19,7 +19,7 @@
     <scroll-view class="content" scroll-y bindscrolltolower="onScrollToLower" lower-threshold="120">
       <view wx:if="{{activeCategoryId === 6}}" class="aesthetic-switch-row">
         <text class="aesthetic-switch-label">{{aestheticZoomEnabled ? '图片放大已开启' : '图片放大已关闭'}}</text>
-        <switch checked="{{aestheticZoomEnabled}}" bindchange="onToggleAestheticZoom" color="#65d2c0" />
+        <switch checked="{{aestheticZoomEnabled}}" bindchange="onToggleAestheticZoom" color="#9fb7ad" />
       </view>
 
       <view wx:if="{{activeCategoryId !== 7}}" class="gallery-grid">
@@ -39,7 +39,7 @@
       <view wx:if="{{activeCategoryId === 7}}" class="video-panel">
         <view class="video-switch-row">
           <text class="video-switch-label">{{videoVisible ? '显示' : '隐藏'}}</text>
-          <switch checked="{{videoVisible}}" bindchange="onToggleVideoVisible" color="#65d2c0" />
+          <switch checked="{{videoVisible}}" bindchange="onToggleVideoVisible" color="#9fb7ad" />
         </view>
 
         <view wx:if="{{videoVisible}}" class="video-list">
