@@ -688,7 +688,13 @@ Component({
       { src: 'https://img.keviecc.online/2026/04/27/2a8d7bc9-7cb8-4e2a-9775-397b6841b3b5/HHjwx3XI0k.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/27/0402f18c-65d7-42b4-ae47-5403ffa563cf/CiC8Azqoom.png', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/27/8fb85caf-ab99-4fae-9391-7296d111a16b/0m1ENhIt27.jpg', tag: 'kk留白影像', categoryId: 6 },
-      { src: 'https://img.keviecc.online/2026/04/27/ef9d64ea-6573-4135-9959-1255e3270dbd/h0cldgEOTp.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/1aea4369-d335-4435-aa9c-ae04d7eabd52/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_191951_502.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/fc4cdcfc-8434-4891-b70e-01d9115b758c/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_191955_900.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/4e73c901-2dca-4a73-9230-eee5a8771e5e/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_191959_609.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/f6943259-1fa3-4d59-ade6-f0a136dfc64b/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_192002_797.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/964d77b6-c0e3-4945-8c78-32d96558929c/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_192005_517.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/9b65875e-e610-42ad-8dab-4ed45fe66176/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_192008_189.jpg', tag: 'kk留白影像', categoryId: 6 },
+      { src: 'https://img.keviecc.online/2026/05/13/3d9cc1e7-c0ac-4f61-b2e7-84bdc372b570/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_192010_731.jpg', tag: 'kk留白影像', categoryId: 6 },
     ] as GalleryItem[],
     videos: [
       {
