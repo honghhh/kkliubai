@@ -38,6 +38,16 @@ Component({
       { src: 'https://p9-pc-sign.douyinpic.com/tos-cn-i-dy/a631b24c89924978a13b348df706bda5~tplv-dy-aweme-images:q75.webp?biz_tag=aweme_images&from=327834062&lk3s=138a59ce&s=PackSourceEnum_PUBLISH&sc=image&se=false&x-expires=1780074000&x-signature=huaNogN9glscKBjUIB%2BQ4SCsxk8%3D', tag: 'kk留白影像', categoryId: 4 },
       { src: 'https://p3-pc-sign.douyinpic.com/tos-cn-i-dy/8d3e051faca14bc5a0ac95fd80495724~tplv-dy-aweme-images:q75.webp?biz_tag=aweme_images&from=327834062&lk3s=138a59ce&s=PackSourceEnum_PUBLISH&sc=image&se=false&x-expires=1780074000&x-signature=KNk3v01VhjOwh4zGhcOSQ1m21U0%3D', tag: 'kk留白影像', categoryId: 4 },
       { src: 'https://p9-pc-sign.douyinpic.com/tos-cn-i-dy/28f4d70828cc4e01ae64bb6af6726e2e~tplv-dy-aweme-images:q75.webp?biz_tag=aweme_images&from=327834062&lk3s=138a59ce&s=PackSourceEnum_PUBLISH&sc=image&se=false&x-expires=1780074000&x-signature=fHszCBYUuiAPXnK%2BuCBWT8OBB60%3D', tag: 'kk留白影像', categoryId: 4 },
+      { src: 'https://img.keviecc.online/2026/05/30/f8ccaa68-88c5-49b8-9aea-ad6bb510f3b2/1.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/916e61a3-e385-4624-9d50-71e89849d70d/2.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/85837a4d-06c6-4a23-8025-00a21827659e/3.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/a13e71e4-57f1-47e7-80bb-0eb5b4bda8b3/4.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/635e7549-a4d9-4588-90fd-f065c32c6f08/5.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/4d1ec6ca-c4f0-40f0-8d09-1c18ce11b006/6.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/3489eaf5-5457-4b4f-9b76-ca97a00c5fb7/7.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/0fc1cd62-1c5c-4974-8601-fc3439efee79/8.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/8e8f42bd-26e1-41c0-b0b3-6aa3b00482e3/9.jpg', tag: 'kk留白影像', categoryId: 5 },
+      { src: 'https://img.keviecc.online/2026/05/30/740de28c-ac4f-4304-aa67-c8f2b6167254/10.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/04/27/4ff45212-6e3e-42fb-9ea3-6a253e3bc3e6/XnUenOwCUO.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/04/27/9a41bcaf-42c3-4485-97bd-1ab500724a64/Yj9u89iNAT.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/04/27/8e2ff1ee-e536-479e-aed7-d96a16af9127/xmGhwq9dM2.jpg', tag: 'kk留白影像', categoryId: 5 },
@@ -116,17 +126,17 @@ Component({
       { src: 'https://img.keviecc.online/2026/05/15/610dff72-e32a-4128-a125-32fa7dd71549/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-15_222142_139.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/15/c5607929-013b-4fd9-9bb2-0babab009e44/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-15_222144_745.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/15/da7f9050-16c3-4c09-b514-92d6b31bac58/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-15_222147_173.jpg', tag: 'kk留白影像', categoryId: 5 },
-      // 指导动作往前加
       { src: 'https://img.keviecc.online/2026/05/13/7aa5f51d-056c-4b27-ac71-18894475ca54/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_190253_507.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/13/0e0a9e72-0f52-4962-a5da-8c5bfff808b6/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_190257_984.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/13/b177a80c-3bb6-4379-875e-ef0736b09415/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_190302_721.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/13/db7330f9-ab24-4afb-ba7d-760f180ec6ab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_190310_949.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/13/f1949f1d-f9c8-4dc4-a398-22c54abaaea9/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_190315_251.jpg', tag: 'kk留白影像', categoryId: 5 },
       { src: 'https://img.keviecc.online/2026/05/13/9c260b87-dc64-497a-be37-b445c1f03e56/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_190319_202.jpg', tag: 'kk留白影像', categoryId: 5 },
+      // 指导动作往前加
+      // 审美图片往后加
       { src: 'https://img.keviecc.online/2026/04/26/e8021b90-9def-490c-8a19-94e8f4501b3d/2a29ed2e194832621f0333c9891494e3.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/04/27/b3649735-2155-4ec5-a3cf-45b888b6a6ac/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260426201603_478_958.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/05/10/afb82a58-05e3-45ac-b13b-6c4675623604/%E6%9C%AA%E5%91%BD%E5%90%8D_%E5%89%AF%E6%9C%AC.jpg', tag: 'kk留白影像', categoryId: 6 },
-      // 审美图片往后加
       { src: 'https://img.keviecc.online/2026/05/18/0a36a67d-2f0c-456b-b089-8dc50e3e58e4/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260517232751_456_2016.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/05/18/ff2de0db-12c6-4a66-af33-5d4718d435ba/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260517232750_455_2016.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/05/18/df784d7f-07b1-4a42-a58c-47980a8840f1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260517232752_457_2016.jpg', tag: 'kk留白影像', categoryId: 6 },
@@ -748,37 +758,34 @@ Component({
     ] as GalleryItem[],
     videos: [
       {
-        id: 1,
+        title: '地铁拍照',
+        src: 'https://k0u2ay30y79y8fzw2408x8752x0x101xxfz.djvod.ndcimgs.com//upic/2026/05/30/08/BMjAyNjA1MzAwODA3NTFfMTMwMDIyNzEwOV8xOTczNDQzMjE1NDBfMF8z_b_B8bb1e4819947f39cb762090276044c81.mp4',
+      },
+      {
         title: '富士参数设置',
         src: 'https://k0u2ay30y79y8fzw2408x8752x0x101xxfz.djvod.ndcimgs.com/upic/2026/04/26/17/BMjAyNjA0MjYxNzA5NTlfMTMwMDIyNzEwOV8xOTQxOTg0NDQxMjFfMF8z_b_B3633f7861e231b6f02b0aec502d08d0f.mp4',
       },
       {
-        id: 2,
         title: '富士色温',
         src: 'https://k0u3cya9y6y15zw240ex958x2102x101x0x1x0x15z.djvod.ndcimgs.com/upic/2026/05/10/10/BMjAyNjA1MTAxMDA4MzNfMTMwMDIyNzEwOV8xOTU1MDc2NDk4NDVfMF8z_b_B71a6f4fd93a2e462ac0d3ff1a331c5f3.mp4',
       },
       {
-        id: 3,
         title: '神牛闪光灯',
         src: 'https://k0u3cya9y6y15zw240ex958x2102x101x0x1x0x15z.djvod.ndcimgs.com/upic/2026/05/10/10/BMjAyNjA1MTAxMDA4NTlfMTMwMDIyNzEwOV8xOTU1MDc2NjMxMTFfMF8z_b_B0a34e8c9eb55aaae11194434d6b3237f.mp4',
       },
       {
-        id: 4,
         title: '富士配件',
         src: 'https://k0ub6y6by50y2czw240excdxef00x281xx2cz.djvod.ndcimgs.com/upic/2026/05/10/10/BMjAyNjA1MTAxMDA5MjBfMTMwMDIyNzEwOV8xOTU1MDc3MTM3MzlfMF8z_b_B6fecc4ab661b52c0a8b536e2d728d907.mp4?tag=1-1778379175-unknown-0-ourf2izwiu-9e84f4f0f5a382ae&provider=self&clientCacheKey=3xr7r5finru9m7c_b.mp4',
       },
       {
-        id: 5,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/02/11/23/BMjAyMzAyMTEyMzUwMTZfMTMwMDIyNzEwOV85NjAxMzU3MDQ2MV8wXzM=_b_Bd1cb86d41f45b65fc4336b2bc57db094.mp4',
       },
       {
-        id: 6,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/05/02/12/BMjAyMzA1MDIxMjA0MjBfMTMwMDIyNzEwOV8xMDIwNjMyMDgxNzBfMF8z_b_B51ffeb6beaee56576ee17e461fe5a433.mp4',
       },
       {
-        id: 7,
         title: '亚索1V2',
         src: 'https://txmov2.a.yximgs.com/upic/2023/01/19/21/BMjAyMzAxMTkyMTU2NDJfMTMwMDIyNzEwOV85NDAzMjAxODQ0OF8wXzM=_b_B816c73d52571ca881a87fa5f933762e5.mp4',
       },
