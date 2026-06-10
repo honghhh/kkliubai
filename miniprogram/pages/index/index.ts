@@ -16,6 +16,9 @@ type VideoItem = {
   poster: string
 }
 
+const ENCRYPTED_CATEGORY_ID = 8
+const ENCRYPTED_CATEGORY_PASSWORD = '123456'
+
 Component({
   data: {
     activeTab: 0,
@@ -29,6 +32,7 @@ Component({
       { id: 5, name: '指导动作' },
       { id: 6, name: '审美积累' },
       { id: 7, name: '视频' },
+      { id: ENCRYPTED_CATEGORY_ID, name: '加密' },
     ] as Category[],
     allImages: [
       { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80', tag: 'kk留白影像', categoryId: 1 },
@@ -755,6 +759,8 @@ Component({
       { src: 'https://img.keviecc.online/2026/05/13/3d9cc1e7-c0ac-4f61-b2e7-84bdc372b570/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-05-13_192010_731.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/05/13/64fafd2d-9499-4784-83fb-bf8b486e0c53/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260513194450_773_958.jpg', tag: 'kk留白影像', categoryId: 6 },
       { src: 'https://img.keviecc.online/2026/05/13/2d779108-c795-4381-9ff8-bd736095d9c3/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260513194449_772_958.jpg', tag: 'kk留白影像', categoryId: 6 },
+      // 加密图片往后加
+      { src: 'https://p3-pc-sign.douyinpic.com/tos-cn-i-dy/0194d66ebf244a57b65e81521b257335~noop.jpeg?biz_tag=pcweb_cover&from=327834062&lk3s=138a59ce&s=PackSourceEnum_PUBLISH&se=false&x-expires=1778691600&x-signature=PtxQXzbfvaC4VVsV2L%2B3ZWnwMoY%3D', tag: '加密影像', categoryId: ENCRYPTED_CATEGORY_ID },
     ] as GalleryItem[],
     videos: [
       {
@@ -799,6 +805,7 @@ Component({
     hasMore: true,
     videoCurrentPage: 1,
     videoHasMore: true,
+    encryptedUnlocked: false,
   },
 
   lifetimes: {
@@ -813,7 +820,9 @@ Component({
       const { allImages } = this.data
 
       if (categoryId === 0) {
-        return allImages.filter((item) => item.categoryId !== 5 && item.categoryId !== 6)
+        return allImages.filter(
+          (item) => item.categoryId !== 5 && item.categoryId !== 6 && item.categoryId !== ENCRYPTED_CATEGORY_ID,
+        )
       }
 
       return allImages.filter((item) => item.categoryId === categoryId)
@@ -826,6 +835,16 @@ Component({
 
     onTapCategory(e: WechatMiniprogram.BaseEvent) {
       const { id } = e.currentTarget.dataset as { id: number }
+
+      if (id === ENCRYPTED_CATEGORY_ID && !this.data.encryptedUnlocked) {
+        this.verifyEncryptedCategory()
+        return
+      }
+
+      this.switchCategory(id)
+    },
+
+    switchCategory(id: number) {
       this.setData({
         activeCategoryId: id,
         currentPage: 1,
@@ -842,6 +861,32 @@ Component({
       }
 
       this.updateDisplayImages(id)
+    },
+
+    verifyEncryptedCategory() {
+      wx.showModal({
+        title: '访问加密分类',
+        editable: true,
+        placeholderText: '请输入密码',
+        success: (res) => {
+          const inputPassword = res.content.trim()
+
+          if (!res.confirm) {
+            return
+          }
+
+          if (inputPassword !== ENCRYPTED_CATEGORY_PASSWORD) {
+            wx.showToast({
+              title: '密码错误',
+              icon: 'none',
+            })
+            return
+          }
+
+          this.setData({ encryptedUnlocked: true })
+          this.switchCategory(ENCRYPTED_CATEGORY_ID)
+        },
+      })
     },
 
     onTapImage(e: WechatMiniprogram.BaseEvent) {
