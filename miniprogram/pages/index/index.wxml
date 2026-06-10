@@ -77,6 +77,27 @@
     <image class="profile-img" src="/images/个人简介.jpg" mode="widthFix" bindtap="onTapProfileImage" />
   </scroll-view>
 
+  <view wx:if="{{encryptedPasswordDialogVisible}}" class="password-mask" catchtap="closeEncryptedPasswordDialog">
+    <view class="password-dialog" catchtap="noop">
+      <text class="password-title">访问加密分类</text>
+      <input
+        class="password-input"
+        value="{{encryptedPassword}}"
+        password="{{true}}"
+        placeholder="请输入密码"
+        placeholder-class="password-placeholder"
+        focus="{{encryptedPasswordDialogVisible}}"
+        bindinput="onEncryptedPasswordInput"
+        bindconfirm="submitEncryptedPassword"
+        confirm-type="done"
+      />
+      <view class="password-actions">
+        <button class="password-btn password-cancel" bindtap="closeEncryptedPasswordDialog">取消</button>
+        <button class="password-btn password-confirm" bindtap="submitEncryptedPassword">确定</button>
+      </view>
+    </view>
+  </view>
+
   <view class="tabbar">
     <view class="tabbar-item {{activeTab === 0 ? 'tabbar-active' : ''}}" bindtap="onTapTab" data-tab="0">
       <view class="tabbar-icon">

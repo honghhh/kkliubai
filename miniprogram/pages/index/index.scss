@@ -212,6 +212,82 @@ page {
   box-shadow: 0 14rpx 30rpx rgba(108, 136, 170, 0.16);
 }
 
+.password-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48rpx;
+  box-sizing: border-box;
+  background: rgba(44, 58, 74, 0.36);
+  backdrop-filter: blur(8rpx);
+}
+
+.password-dialog {
+  width: 100%;
+  padding: 42rpx 36rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 30rpx;
+  background: #fff;
+  box-shadow: 0 24rpx 60rpx rgba(70, 92, 120, 0.24);
+}
+
+.password-title {
+  display: block;
+  margin-bottom: 28rpx;
+  color: var(--text-1);
+  font-size: 34rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.password-input {
+  height: 88rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  color: var(--text-1);
+  font-size: 30rpx;
+  border: 1px solid var(--line);
+  border-radius: 18rpx;
+  background: #fff;
+}
+
+.password-placeholder {
+  color: var(--text-2);
+}
+
+.password-actions {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 32rpx;
+}
+
+.password-btn {
+  flex: 1;
+  height: 78rpx;
+  margin: 0 !important;
+  font-size: 28rpx;
+  line-height: 78rpx;
+  border-radius: 999rpx !important;
+}
+
+.password-cancel {
+  color: var(--text-2) !important;
+  background: var(--surface-soft) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.password-confirm {
+  color: var(--text-2) !important;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%) !important;
+  border: 0 !important;
+}
+
 .tabbar {
   position: fixed;
   bottom: 18rpx;

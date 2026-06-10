@@ -806,6 +806,8 @@ Component({
     videoCurrentPage: 1,
     videoHasMore: true,
     encryptedUnlocked: false,
+    encryptedPasswordDialogVisible: false,
+    encryptedPassword: '',
   },
 
   lifetimes: {
@@ -864,29 +866,42 @@ Component({
     },
 
     verifyEncryptedCategory() {
-      wx.showModal({
-        title: '访问加密分类',
-        editable: true,
-        placeholderText: '请输入密码',
-        success: (res) => {
-          const inputPassword = res.content.trim()
-
-          if (!res.confirm) {
-            return
-          }
-
-          if (inputPassword !== ENCRYPTED_CATEGORY_PASSWORD) {
-            wx.showToast({
-              title: '密码错误',
-              icon: 'none',
-            })
-            return
-          }
-
-          this.setData({ encryptedUnlocked: true })
-          this.switchCategory(ENCRYPTED_CATEGORY_ID)
-        },
+      this.setData({
+        encryptedPasswordDialogVisible: true,
+        encryptedPassword: '',
       })
+    },
+
+    onEncryptedPasswordInput(e: WechatMiniprogram.Input) {
+      this.setData({ encryptedPassword: e.detail.value })
+    },
+
+    closeEncryptedPasswordDialog() {
+      this.setData({
+        encryptedPasswordDialogVisible: false,
+        encryptedPassword: '',
+      })
+    },
+
+    noop() {},
+
+    submitEncryptedPassword() {
+      const inputPassword = this.data.encryptedPassword.trim()
+
+      if (inputPassword !== ENCRYPTED_CATEGORY_PASSWORD) {
+        wx.showToast({
+          title: '密码错误',
+          icon: 'none',
+        })
+        return
+      }
+
+      this.setData({
+        encryptedUnlocked: true,
+        encryptedPasswordDialogVisible: false,
+        encryptedPassword: '',
+      })
+      this.switchCategory(ENCRYPTED_CATEGORY_ID)
     },
 
     onTapImage(e: WechatMiniprogram.BaseEvent) {
